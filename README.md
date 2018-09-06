@@ -5,14 +5,16 @@ dockerfiles for kkday codeigniter projects
 ## Project Structure
 
 ```
-|Dockerfile
-|build.sh
-|docker-run.sh
-|--certificate
-|   |--KKday_Root_CA.crt
-|--nginx
-|   |--www
-|kkday-member-ci (project folders)
+| Dockerfile
+| build.sh
+| docker-run.sh
+|-- certificate
+|   |-- KKday_Root_CA.crt
+|-- nginx
+|   |-- www
+|   |-- mobile
+| kkday-member-ci (project folders)
+| kkday-mobile-member-ci (project folders)
 ```
 
 ## Setup
@@ -30,10 +32,12 @@ dockerfiles for kkday codeigniter projects
 ### Setup
 
     $ git clone git@github.com:kkday-it/kkday-member-ci.git
-    # put your kkday-member-ci project in the folder
+    $ git clone git@github.com:kkday-it/kkday-mobile-member-ci.git
+    # put your kkday-member-ci, kkday-mobile-member-ci project in the folder
 
 ### Run
 
     $ ./docker-run.sh
     # Run up the environment
-    # visit http://127.0.0.1:81
+    # visit http://127.0.0.1:8080 (www)
+    # visit http://127.0.0.1:8081 (mobile)
