@@ -10,10 +10,10 @@ RUN \
   LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
   apt-get -y update && \
   apt-get install -y php5.6 php5.6-redis php5.6-curl php5.6-fpm && \
-  apt-get install -y nginx
+  apt-get install -y nginx redis-server
 
 # Port setting
 EXPOSE 80
 
 # Startup command 
-CMD ["sh", "-c", "/usr/sbin/update-ca-certificates; /etc/init.d/php5.6-fpm start && nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "/usr/sbin/update-ca-certificates; /etc/init.d/redis-server start && /etc/init.d/php5.6-fpm start && nginx -g 'daemon off;'"]

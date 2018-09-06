@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t kkday-member-ci . --no-cache
+docker build -t kkday-ci . --no-cache
