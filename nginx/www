@@ -1,6 +1,10 @@
 server {
         listen 80;
-        server_name _;
+        listen 443 ssl;
+        server_name www.dev.kkday.com;
+
+        ssl_certificate /etc/ssl/certs/localssl.crt;
+        ssl_certificate_key /etc/ssl/private/localssl.key;
 
         root /kkday-member-ci;
         index index.php index.html index.htm;
