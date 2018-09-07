@@ -10,6 +10,8 @@ dockerfiles for kkday codeigniter projects
 | docker-run.sh
 |-- certificate
 |   |-- KKday_Root_CA.crt
+|   |-- localssl.crt
+|   |-- localssl.key
 |-- nginx
 |   |-- www
 |   |-- mobile
@@ -36,13 +38,21 @@ dockerfiles for kkday codeigniter projects
     $ git clone git@github.com:kkday-it/kkday-memeber-ci.git
     $ git clone git@github.com:kkday-it/kkday-mobile-member-ci.git
     # put your kkday-member-ci, kkday-mobile-member-ci project in the folder
+    
+### Hosts
+
+    # Add following settings in your /etc/hosts
+    # 127.0.0.1 www.dev.kkday.com
+    # 127.0.0.1 m.dev.kkday.com
 
 ### Run
 
-    $ ./docker-run.sh kkday-member-ci
+    $ ./docker-run.sh all
     # Run up the environment
-    # visit http://127.0.0.1:8080 (www)
+    # visit https://www.dev.kkday.com:8080 (www)
+    # visit https://m.dev.kkday.com:8081 (mobile)
 
 ### Update Redis
 
     $ docker exec -ti docker-member-ci sh -c "php /tools/uiLang.php"
+    $ docker exec -ti docker-mobile-member-ci sh -c "php /tools/uiLang.php"
