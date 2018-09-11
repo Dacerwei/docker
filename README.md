@@ -42,15 +42,15 @@ dockerfiles for kkday codeigniter projects
 ### Hosts
 
     # Add following settings in your /etc/hosts
-    # 127.0.0.1 www.dev.kkday.com
-    # 127.0.0.1 m.dev.kkday.com
+    127.0.0.1 www.dev.kkday.com
+    127.0.0.1 m.dev.kkday.com
 
 ### Run
 
     $ ./docker-run.sh all
     # Run up the environment
-    # visit https://www.dev.kkday.com:8080 (www)
-    # visit https://m.dev.kkday.com:8081 (mobile)
+    visit https://www.dev.kkday.com:8080 (www)
+    visit https://m.dev.kkday.com:8081 (mobile)
 
 ### Update Redis
 
